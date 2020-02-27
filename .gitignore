@@ -3,10 +3,6 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
-#3j
-folderhighlight*
-desktop.ini
-
 
 # User-specific files
 *.rsuser
@@ -356,3 +352,11 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+################3j
+folderhighlight*
+desktop.ini
+*/bin/*
+!*/bin/data/
+
+
