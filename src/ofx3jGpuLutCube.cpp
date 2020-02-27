@@ -109,7 +109,7 @@ bool ofx3jGpuLutCube::load(const string & _cubeLutFilename, const bool &_bNegati
 	ofLogNotice(__FUNCTION__) << "LUT.size(): " << LUT.size() << " --> " << int(ceil(pow(LUT.size(), 1.0 / 3.0)));
 #endif
 
-	if(_bNegative) std::reverse(LUT.begin(), LUT.end());
+	if (_bNegative) std::reverse(LUT.begin(), LUT.end());
 
 	// Create a 3D texture
 	// Reference from http://content.gpwiki.org/index.php/OpenGL:Tutorials:3D_Textures
@@ -146,8 +146,8 @@ bool ofx3jGpuLutCube::load(const string & _cubeLutFilename, const bool &_bNegati
 }
 
 ofImage ofx3jGpuLutCube::load(
-	const string	&_imageFilename, 
-	const string	&_cubeLutFilename, 
+	const string	&_imageFilename,
+	const string	&_cubeLutFilename,
 	const bool		&_bNegative,
 	const float		&_mix,
 	const int		&_fboNumSamples
@@ -165,7 +165,6 @@ ofImage ofx3jGpuLutCube::load(
 }
 
 // _image needs to be GL_TEXTURE_2D, use ofDisableArbTex() before allocating image
-// may assign to itself i.e.: image = lut.apply(image)
 ofImage  & ofx3jGpuLutCube::apply(const ofTexture &_tex, const float & _mix, const int & _fboNumSamples) {
 
 	if (!bIsLoaded) {
@@ -228,8 +227,8 @@ ofImage  & ofx3jGpuLutCube::apply(const ofTexture &_tex, const float & _mix, con
 		}
 #endif
 
-			}
+	}
 	fbo.end();
 	fbo.readToPixels(image.getPixels()); // had an issue before directly passing back into an image passed by reference...
 	return image;
-		}
+}
