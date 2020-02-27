@@ -1,6 +1,10 @@
 ################3j
 folderhighlight*
 desktop.ini
+*.VC.db
+*.sln
+*.vcxproj*
+
 
 #########################
 # general patterns
