@@ -1,5 +1,5 @@
 /*
-	this is based on
+	based on
 	https://github.com/youandhubris/GPU-LUT-OpenFrameworks
 	BY HUBRIS
 	PORTO · DECEMBER 2014
