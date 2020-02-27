@@ -9,5 +9,8 @@ https://github.com/youandhubris/GPU-LUT-OpenFrameworks
 BY HUBRIS
 PORTO · DECEMBER 2014
 
+inspired by this discussion
+https://github.com/yasuhirohoshino/ofxGpuLut/issues/3
+
 cube lut specs:
 https://wwwimages2.adobe.com/content/dam/acom/en/products/speedgrade/cc/pdfs/cube-lut-specification-1.0.pdf
