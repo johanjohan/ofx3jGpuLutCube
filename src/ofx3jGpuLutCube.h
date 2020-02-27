@@ -16,7 +16,7 @@
 #undef NDEBUG
 #include <assert.h> 
 
-#define OFX3JGPULUTCUBE_DEBUG // change to your liking
+#undef OFX3JGPULUTCUBE_DEBUG // change to your liking
 
 class ofx3jGpuLutCube {
 
