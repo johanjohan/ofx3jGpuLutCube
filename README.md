@@ -1,8 +1,8 @@
 ofx3jGpuLutCube
 ================
 
-ofx3jGpuLutCube is loading .cube luts for image processing with a LUT_3D_SIZE that is a pow2 (16, 32, 64).
-Luts with other LUT_3D_SIZE may be batch converted with https://grossgrade.com/en/ beforehand.
+ofx3jGpuLutCube is loading widely used .cube luts for image processing and color grading with a LUT_3D_SIZE that is a pow2 (16, 32, 64). 
+Luts with other LUT_3D_SIZE may be batch converted with https://grossgrade.com/en/ or similar tools beforehand.
 
 based on
 https://github.com/youandhubris/GPU-LUT-OpenFrameworks
