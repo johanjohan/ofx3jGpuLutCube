@@ -1,4 +1,16 @@
 /*
+
+	_____/\\\\\\\\\\_____________
+	___/\\\///////\\\_______/\\\_
+	__\///______/\\\_______\///__
+	_________/\\\//_________/\\\_
+	________\////\\\_______\/\\\_
+	___________\//\\\______\/\\\_
+	__/\\\______/\\\___/\\_\/\\\_
+	_\///\\\\\\\\\/___\//\\\\\\__
+	___\/////////______\//////___
+
+
 	based on
 	https://github.com/youandhubris/GPU-LUT-OpenFrameworks
 	BY HUBRIS
@@ -13,8 +25,9 @@
 
 #include "ofMain.h"
 
-#undef NDEBUG
-#include <assert.h> 
+//// use assert in release
+//#undef NDEBUG
+//#include <assert.h> 
 
 #undef OFX3JGPULUTCUBE_DEBUG // change to your liking
 
@@ -47,12 +60,12 @@ public:
 	ofx3jGpuLutCube() : bIsLoaded(false), title("") {}
 	~ofx3jGpuLutCube() {}
 
-	void			setup() {}
+	void				setup() {}
 
-	bool			load(const string &_cubeLutFilename, const bool &_bNegative=false);
+	bool				load(const string &_cubeLutFilename, const bool &_bNegative=false);
 
 	// this one load an image and applies the lut by factor _mix [0...1]
-	static ofImage	load(
+	static ofImage		load(
 		const string	&_imageFilename, 
 		const string	&_cubeLutFilename, 
 		const bool		&_bNegative = false,
@@ -60,11 +73,11 @@ public:
 		const int		&_fboNumSamples = 0
 	);
 
-	ofImage			&apply(const ofTexture &_tex, const float &_mix = 1.f, const int &_fboNumSamples = 0);
+	ofImage				&apply(const ofTexture &_tex, const float &_mix = 1.f, const int &_fboNumSamples = 0);
 
-	ofFbo			&getFbo() { return fbo; }
+	ofFbo				&getFbo() { return fbo; }
 
-	void			draw(int x, int y) { fbo.draw(x,y); }
+	void				draw(int x, int y) { fbo.draw(x,y); }
 
-	string			getTitle() { return title; }
+	string				getTitle() { return title; }
 };

@@ -30,8 +30,6 @@ bool ofx3jGpuLutCube::load(const string & _cubeLutFilename, const bool &_bNegati
 
 		if (row.empty()) continue;
 
-		//row = ofTrim(row); // slow
-
 		RGB line;
 		if (sscanf(row.c_str(), "%f %f %f", &line.r, &line.g, &line.b) == 3) {
 			line.r = ofNormalize(line.r, lower.r, upper.r);
@@ -86,7 +84,7 @@ bool ofx3jGpuLutCube::load(const string & _cubeLutFilename, const bool &_bNegati
 				}
 			}
 		}
-		else if (ofTrim(row)[0] == '#') { // can access [0] because empty lines are skipped above
+		else if (ofTrim(row)[0] == '#') { // can access [0] without size check because empty lines are skipped above
 			if (isDebug()) ofLogNotice(__FUNCTION__) << "found comment: " << row;
 		}
 		else {
@@ -230,5 +228,6 @@ ofImage  & ofx3jGpuLutCube::apply(const ofTexture &_tex, const float & _mix, con
 	}
 	fbo.end();
 	fbo.readToPixels(image.getPixels()); // had an issue before directly passing back into an image passed by reference...
+
 	return image;
 }
