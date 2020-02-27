@@ -11,6 +11,9 @@ PORTO · DECEMBER 2014
 
 inspired by this discussion
 https://github.com/yasuhirohoshino/ofxGpuLut/issues/3
+which obviously spawned one more addon by @moebiussurfing
+https://github.com/moebiussurfing/ofxGpuLutCube
+published at the identical moment
 
 cube lut specs:
 https://wwwimages2.adobe.com/content/dam/acom/en/products/speedgrade/cc/pdfs/cube-lut-specification-1.0.pdf
